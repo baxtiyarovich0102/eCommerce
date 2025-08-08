@@ -2,6 +2,14 @@
 
     <P class="fs-1">Register</P>
 
+    {{#if registerError}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong>
+            {{registerError}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+
     <form action="/register" method="post">
 
     <div class="d-flex gap-3">
